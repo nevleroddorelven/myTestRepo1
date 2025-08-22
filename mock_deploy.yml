@@ -2,7 +2,7 @@ name: Handle Custom Dispatch Event
 
 on:
   repository_dispatch:
-    types: [custom_event]
+    types: mock_deploy
 
 jobs:
   handle-dispatch:
@@ -16,3 +16,4 @@ jobs:
           echo "Event type: ${{ github.event.action }}"
           echo "Payload received:"
           echo "${{ toJson(github.event.client_payload) }}"
+
